@@ -1,4 +1,5 @@
 function findObjByid(array, id) {
+  // Abstracted function for findAuthorById and findBookById.
   let obj = {};
   obj = array.filter((item) => item.id === id);
   return obj[0];

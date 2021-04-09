@@ -30,6 +30,7 @@ function getCurrentBorrows(account, books) {
   // Accepts the account (who is borrowing),
   // and an array of all books.
   // Returns an array of currently borrowed books for an account.
+  // Helper function for getBooksPossessedByAccount.
   let currentBorrowed = [];
   for (let book of books) {
     for (let instance of book.borrows) {
@@ -45,6 +46,7 @@ function findAuthor(authors, book) {
   // Accepts array of all authors
   // and a book to find the author for.
   // Returns the corresponding author object.
+  // Helper function for getBooksPossessedByAccount.
   return authors.find((auth) => auth.id === book.authorId);
 }
 
